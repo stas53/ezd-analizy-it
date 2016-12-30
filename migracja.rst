@@ -1,6 +1,6 @@
 **Laboratorium EE**
 
-*29 XII 2016*
+*30 XII 2016*
 
 Model migracji z systemów EZD PUW i eDok
 ========================================
@@ -21,14 +21,14 @@ zaimplementowane operacje eksportu (przekazywania) danych do innych systemów. P
 
 - przesyłanie dokumentów do innych systemów teleinformatycznych, w szczególności przez eksport
   dokumentów i ich metadanych z zachowaniem powiązań pomiędzy tymi dokumentami i metadanymi
-  zob. §6 pkt 14 Rozporządzenia Ministra Spraw Wewnętrznych i Administracji z dnia 30 października
+  (zob. §6 pkt 14 Rozporządzenia Ministra Spraw Wewnętrznych i Administracji z dnia 30 października
   2006 r. w sprawie szczegółowego sposobu postępowania z dokumentami elektronicznymi
   http://isap.sejm.gov.pl/DetailsServlet?id=WDU20062061518)
 - wytworzenie „paczki archiwalnej” z dokumentami, do przekazania do Archiwum Państwowego oraz spisu
   zdawczo-odbiorczego odpowiadającego określonej paczce archiwalnej (zob. §6 pkt 13 14
   Rozporządzenia MSWiA z dnia 30 października 2006)
 
-Do marca 2017r., jest też realizowany projekt we współpracy MC - COI - NSA - WSA - PUW, mający na celu
+Do marca 2017r. jest też realizowany projekt we współpracy MC - COI - NSA - WSA - PUW, mający na celu
 przygotowanie formatu danych, który będzie używany do przekazywania danych z systemów EZD
 do systemu do obsługi postępowania sądowoadministracyjnego realizowanego w ramach projektu OPSAD [1]_.
 
@@ -46,7 +46,7 @@ Rysunek poniżej ilustruje fakt, iż przeniesienie danych z jednego systemu do d
 tylko dla danych takich, które są modelowane w obydwu systemach i są dla systemu docelowego
 "interesujące" (użytkownicy systemu potrzebują takich danych w swej działalności).
 
-.. image:: images/dane_dwoch_systemow.svg
+.. image:: images/dane_dwoch_systemow.png
 
 To, że w jednym systemie nie ma pewnych danych, które są obecne w innym systemie może wynikać
 z braku odpowiednich pól albo z ograniczeń zastosowanego modelu danych.
@@ -75,12 +75,13 @@ Istniejące  w kraju rozwiązania
 
 W załączniku do rozporządzenia Ministra Spraw Wewnętrznych i Administracji z dnia 2 listopada 2006 r.
 w sprawie wymagań technicznych formatów zapisu i informatycznych nośników danych, na których
-utrwalono materiały archiwalne przekazywane do archiwów państwowych  Dz.U. nr 206 poz. 1519 (dalej zwane
+utrwalono materiały archiwalne przekazywane do archiwów państwowych  Dz.U. 2006 nr 206 poz. 1519 (dalej zwane
 rozp. 1519 [2]_), podano techniczne informacje dotyczące sposobu zapisu przekazywanych danych,
 w szczególności zdefiniowano format danych.
 
 Format ten powstał w wyniku prac interdyscyplinarnej grupy specjalistów z Ministerstwa Spraw
-Wewnętrznych i Administracji, Archiwów Państwowych oraz NASK i Uniwersytetu Warszawskiego. Systemy
+Wewnętrznych i Administracji, Archiwów Państwowych oraz Naukowej i Akademickiej Sieci Komputerowej
+(NASK) i Uniwersytetu Warszawskiego. Systemy
 EZD PUW i eDok posiadają funkcjonalności generujące paczki danych zgodne z tym formatem. Format ten
 jest nazywany „formatem paczki archiwalnej”, zgodnie z definicją zawartą w §6 ust. 4 rozp. 1519.
 Ze względu na rozmiar, nie cytujemy go w tym miejscu; w całości można go znaleźć w załączniku
@@ -97,9 +98,9 @@ Taki schemat nie wyjaśnia jednak sposobu rozumienia poszczególnych elementów 
 nie jest jednoznacznie jasne jakie metadane powinny być przekazane w ramach elementów oznaczanych
 jako <Tworca>, <Dostep>, <Grupowanie> itd.
 
-Nie wyjaśnia tego także rozporządzenie o którym mowa w §3 ust. 2 i 3  rozp. 1519 (czyli Rozporządzenie
+Nie wyjaśnia tego także rozporządzenie o którym mowa w §3 ust. 2 i 3  rozp. 1519, czyli rozporządzenie
 Ministra Spraw Wewnętrznych i Administracji z dnia 30 października 2006 r. w sprawie niezbędnych
-elementów struktury dokumentów elektronicznych, Dz.U. nr 206 poz. 1517 (zwane rozp. 1517 [3]_).
+elementów struktury dokumentów elektronicznych, Dz.U. 2006 nr 206 poz. 1517 (zwane rozp. 1517 [3]_).
 
 Celem ustalenia dobrej praktyki powstała propozycja objaśnień dla metadanych stanowiących niezbędne
 elementów struktury dokumentów elektronicznych, stanowiąca jednocześnie uzupełnienie dla dokumentu
@@ -116,7 +117,7 @@ w systemie EZD ma określonego adresata i co za tym idzie nie może to być elem
 W efekcie metadane pozbawione informacji o adresatach (odbiorcach) dokumentów będą automatycznie
 uznawane jako zgodne z rozporządzeniem 1519, gdyż paczka archiwalna będzie technicznie zgodna
 ze schematem XM. Mimo że takie dane nie będą zgodne z ogólnymi wytycznymi wynikającymi w art. 6
-ust. 1 i 1a ustawy o narodowym zasobie archiwalnym i archiwach (Dz.U.2016, poz.1506 ) gdyż paczka
+ust. 1 i 1a ustawy o narodowym zasobie archiwalnym i archiwach (Dz.U. 2016, poz.1506) gdyż paczka
 nie będzie zawierała kompletu danych odzwierciedlających sposób załatwiania sprawy, to nie da się
 tego zweryfikować automatycznie.
 
@@ -150,7 +151,7 @@ były podzbiorami tego samego, spójnego, generalnego formatu wymiany danych.
 Spójność tych formatów znacznie ułatwi ich implementację, a zwłaszcza spowoduje duże ułatwienie
 w przyszłości, w sytuacjach gdy pojawi się potrzeba rozszerzenia zakresu przekazywanych danych.
 
-.. image:: images/zakres_danych_formatu_wymiany.svg
+.. image:: images/zakres_danych_formatu_wymiany.png
 
 Niestety, realizacja tego postulatu może być zagrożona przez fakt, iż prace nad formatem przekazywania
 danych dla sądów administracyjnych mają się zakończyć w marcu 2017 i mogą doprowadzić do powstania
