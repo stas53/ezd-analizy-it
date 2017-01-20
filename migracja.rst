@@ -9,7 +9,7 @@ Wstęp
 <<<<<
 
 Operacja migracji danych z instalacji istniejącego systemu EZD do innego system EZD, powinna być
-realizowana za pośrednictwem pliku pośredniego (lub pewnej liczby plików) — a nie on-line.
+realizowana za pośrednictwem pliku pośredniego (lub pewnej liczby plików).
 
 Dane pośrednie będą zapisane w formacie, który jest wspólny dla obu systemów.
 
@@ -19,20 +19,24 @@ Migracja a eksport wybranych danych
 Przekazywanie danych z systemu EZD może mieć miejsce w kilku sytuacjach. Każdy system EZD musi mieć
 zaimplementowane operacje eksportu (przekazywania) danych do innych systemów. Przynajmniej:
 
+
 - przesyłanie dokumentów do innych systemów teleinformatycznych, w szczególności przez eksport
   dokumentów i ich metadanych z zachowaniem powiązań pomiędzy tymi dokumentami i metadanymi
-  (zob. §6 pkt 14 Rozporządzenia Ministra Spraw Wewnętrznych i Administracji z dnia 30 października
-  2006 r. w sprawie szczegółowego sposobu postępowania z dokumentami elektronicznymi
-  http://isap.sejm.gov.pl/DetailsServlet?id=WDU20062061518)
+  (zob. §6 pkt 14 `Rozporządzenia Ministra Spraw Wewnętrznych i Administracji z dnia 30 października 2006 r. w sprawie szczegółowego sposobu postępowania z dokumentami elektronicznymi`_)
+
+.. _Rozporządzenia Ministra Spraw Wewnętrznych i Administracji z dnia 30 października 2006 r. w sprawie szczegółowego sposobu postępowania z dokumentami elektronicznymi: http://isap.sejm.gov.pl/DetailsServlet?id=WDU20062061518
+
 - wytworzenie „paczki archiwalnej” z dokumentami, do przekazania do Archiwum Państwowego oraz spisu
-  zdawczo-odbiorczego odpowiadającego określonej paczce archiwalnej (zob. §6 pkt 13 14
-  Rozporządzenia MSWiA z dnia 30 października 2006)
+  zdawczo-odbiorczego odpowiadającego określonej paczce archiwalnej (zob. §6 pkt 13 – 14
+  `Rozporządzenia MSWiA z dnia 30 października 2006`_ wspomnianego wyżej)
+
+.. _Rozporządzenia MSWiA z dnia 30 października 2006: http://isap.sejm.gov.pl/DetailsServlet?id=WDU20062061518
 
 Do marca 2017r. jest też realizowany projekt we współpracy MC - COI - NSA - WSA - PUW, mający na celu
 przygotowanie formatu danych, który będzie używany do przekazywania danych z systemów EZD
 do systemu do obsługi postępowania sądowoadministracyjnego realizowanego w ramach projektu OPSAD [1]_.
 
-Wydaje się rozsądnym, by do wszystkich operacji masowego produkowania danych do wymiany, używany
+Wydaje się rozsądnym, by do wszystkich operacji masowego produkowania danych do wymiany używany
 był syntaktycznie ten sam format danych — a tworzone pliki różniły się tylko zakresem danych,
 w zależności od zamierzonego celu eksportu.
 
@@ -73,20 +77,18 @@ Zaletą binarnych formatów jest ich mniejszy rozmiar w stosunku do formatów te
 Istniejące  w kraju rozwiązania
 -------------------------------
 
-W załączniku do rozporządzenia Ministra Spraw Wewnętrznych i Administracji z dnia 2 listopada 2006 r.
-w sprawie wymagań technicznych formatów zapisu i informatycznych nośników danych, na których
-utrwalono materiały archiwalne przekazywane do archiwów państwowych  Dz.U. 2006 nr 206 poz. 1519 (dalej zwane
-rozp. 1519 [2]_), podano techniczne informacje dotyczące sposobu zapisu przekazywanych danych,
-w szczególności zdefiniowano format danych.
+W załączniku do `Rozporządzenia Ministra Spraw Wewnętrznych i Administracji z dnia 2 listopada 2006 r. w sprawie wymagań technicznych formatów zapisu i informatycznych nośników danych, na których utrwalono materiały archiwalne przekazywane do archiwów państwowych <http://isap.sejm.gov.pl/DetailsServlet?id=WDU20062061519>`_
+Dz.U. 2006 nr 206 poz. 1519 (dalej zwane rozporządzeniem 1519 [2]_), podano techniczne informacje
+dotyczące sposobu zapisu przekazywanych danych, w szczególności zdefiniowano format danych.
 
-Format ten powstał w wyniku prac interdyscyplinarnej grupy specjalistów z Ministerstwa Spraw
-Wewnętrznych i Administracji, Archiwów Państwowych oraz Naukowej i Akademickiej Sieci Komputerowej
-(NASK) i Uniwersytetu Warszawskiego. Systemy
-EZD PUW i eDok posiadają funkcjonalności generujące paczki danych zgodne z tym formatem. Format ten
-jest nazywany „formatem paczki archiwalnej”, zgodnie z definicją zawartą w §6 ust. 4 rozp. 1519.
-Ze względu na rozmiar, nie cytujemy go w tym miejscu; w całości można go znaleźć w załączniku
-do rozporządzenia dostępnego pod adresem http://isap.sejm.gov.pl/DetailsServlet?id=WDU20062061519,
-jak również pod adresem https://ade.ap.gov.pl/ndap-walidator/downloadmeta.do (tamże metadane-1.6.xsd)
+Format ten powstał w wyniku prac interdyscyplinarnej grupy specjalistów z Ministerstwa Spraw Wewnętrznych
+i Administracji, Archiwów Państwowych oraz Naukowej i Akademickiej Sieci Komputerowej (NASK) i Uniwersytetu
+Warszawskiego. Systemy EZD PUW i eDok posiadają funkcjonalności generujące paczki danych zgodne z tym
+formatem. Format ten jest nazywany „formatem paczki archiwalnej”, zgodnie z definicją zawartą w §6 ust. 4
+rozp. 1519. Ze względu na rozmiar, nie cytujemy go w tym miejscu; w całości można go znaleźć w załączniku
+do rozporządzenia 1519, jak również w zasobach portalu
+`Archiwów Państwowych <https://ade.ap.gov.pl/ndap-walidator/downloadmeta.do>`_
+(tamże jako Metadane-1.6.xsd)
 
 Modyfikacje obowiązującego formatu wymiany danych
 -------------------------------------------------
@@ -98,11 +100,10 @@ Taki schemat nie wyjaśnia jednak sposobu rozumienia poszczególnych elementów 
 nie jest jednoznacznie jasne jakie metadane powinny być przekazane w ramach elementów oznaczanych
 jako <Tworca>, <Dostep>, <Grupowanie> itd.
 
-Nie wyjaśnia tego także rozporządzenie o którym mowa w §3 ust. 2 i 3  rozp. 1519, czyli rozporządzenie
-Ministra Spraw Wewnętrznych i Administracji z dnia 30 października 2006 r. w sprawie niezbędnych
-elementów struktury dokumentów elektronicznych, Dz.U. 2006 nr 206 poz. 1517 (zwane rozp. 1517 [3]_).
+Nie wyjaśnia tego także rozporządzenie o którym mowa w §3 ust. 2 i 3  rozp. 1519, czyli
+`Rozporządzenie Ministra Spraw Wewnętrznych i Administracji z dnia 30 października 2006 r. w sprawie niezbędnych elementów struktury dokumentów elektronicznych <http://isap.sejm.gov.pl/DetailsServlet?id=WDU20062061517>`_, Dz.U. 2006 nr 206 poz. 1517 (zwane rozporządzeniem 1517 [3]_).
 
-Celem ustalenia dobrej praktyki powstała propozycja objaśnień dla metadanych stanowiących niezbędne
+Celem ustalenia dobrej praktyki, powstała propozycja objaśnień dla metadanych stanowiących niezbędne
 elementów struktury dokumentów elektronicznych, stanowiąca jednocześnie uzupełnienie dla dokumentu
 schematu XML [4]_ (nie stała się ona jednak dokumentem obowiązującym).
 Planowane jest opublikowanie nowej propozycji objaśnień oraz ustanowienie niewielkich zmian formatu
