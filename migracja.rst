@@ -1,12 +1,8 @@
-**Laboratorium EE**
-
-*30 XII 2016*
-
 Model migracji z systemów EZD PUW i eDok
 ========================================
 
 Wstęp
-<<<<<
+-----
 
 Operacja migracji danych z instalacji istniejącego systemu EZD do innego system EZD, powinna być
 realizowana za pośrednictwem pliku pośredniego (lub pewnej liczby plików).
@@ -14,7 +10,7 @@ realizowana za pośrednictwem pliku pośredniego (lub pewnej liczby plików).
 Dane pośrednie będą zapisane w formacie, który jest wspólny dla obu systemów.
 
 Migracja a eksport wybranych danych
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+-----------------------------------
 
 Przekazywanie danych z systemu EZD może mieć miejsce w kilku sytuacjach. Każdy system EZD musi mieć
 zaimplementowane operacje eksportu (przekazywania) danych do innych systemów. Przynajmniej:
@@ -41,10 +37,10 @@ był syntaktycznie ten sam format danych — a tworzone pliki różniły się ty
 w zależności od zamierzonego celu eksportu.
 
 Model danych
-<<<<<<<<<<<<
+------------
 
 Dane przechowywane w systemie
------------------------------
++++++++++++++++++++++++++++++
   
 Rysunek poniżej ilustruje fakt, iż przeniesienie danych z jednego systemu do drugiego jest możliwe
 tylko dla danych takich, które są modelowane w obydwu systemach i są dla systemu docelowego
@@ -63,7 +59,7 @@ stanowisku szczegółami.)
 
 
 Format wymiany danych
-<<<<<<<<<<<<<<<<<<<<<
+---------------------
 
 Do wymiany danych między nie-współpracującymi on-line systemami, stosowane bywają formaty:
 
@@ -75,7 +71,7 @@ Zaletą formatów opartych na XML jest możliwość łatwego czytania pliku teks
 Zaletą binarnych formatów jest ich mniejszy rozmiar w stosunku do formatów tekstowych. 
 
 Istniejące  w kraju rozwiązania
--------------------------------
++++++++++++++++++++++++++++++++
 
 W załączniku do `Rozporządzenia Ministra Spraw Wewnętrznych i Administracji z dnia 2 listopada 2006 r. w sprawie wymagań technicznych formatów zapisu i informatycznych nośników danych, na których utrwalono materiały archiwalne przekazywane do archiwów państwowych <http://isap.sejm.gov.pl/DetailsServlet?id=WDU20062061519>`_
 Dz.U. 2006 nr 206 poz. 1519 (dalej zwane rozporządzeniem 1519 [2]_), podano techniczne informacje
@@ -91,7 +87,7 @@ do rozporządzenia 1519, jak również w zasobach portalu
 (tamże jako Metadane-1.6.xsd)
 
 Modyfikacje obowiązującego formatu wymiany danych
--------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Format ustanowiony w załączniku rozporządzenia 1519 został określony zgodnie z zasadami schematu XML.
 Schemat XML jest strukturą techniczną ustalającą nazewnictwo i układ wyodrębnionych elementów
@@ -132,7 +128,7 @@ papierowe stanowią naturalną część dokumentacji.
 
 
 Wymagania interoperacyjne
--------------------------
++++++++++++++++++++++++++
 
 Formaty danych oparte na składni XML są bardzo rozpowszechnione.
 Ze względu na fakt obowiązywania rozporządzenia 1519, które wprowadza format oparty na XML, oraz
@@ -161,7 +157,7 @@ może być niezgodny technicznie z paczką archiwalną lub paczką danych do mig
 
 
 Dane, których może nie być w paczce archiwalnej
------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++
                    
 Paczka archiwalna została zdefiniowana w celu określenia uporządkowanego sposobu przekazywania
 do archiwów państwowych, dokumentacji stanowiącej materiały archiwalne w postaci elektronicznej.
@@ -192,13 +188,13 @@ formatu paczki archiwalnej może niepotrzebnie komplikować tę migrację.
 
 
 Dane o ograniczonej dostępności (niejawne)
-------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++
 
 Dane niejawne są przechowywane odrębnie i nie będą przedmiotem procedury automatycznej migracji
 danych EZD. Ich przeniesienie musi być zrealizowane odrębną procedurą.
 
 Wnioski
-<<<<<<<
+-------
 
 - podstawą do zaprojektowania formatu danych używanych przy migracji, powinien być (zmodyfikowany)
   format używany obecnie do eksportu danych z systemów EZD do archiwów państwowych, rozszerzony o
